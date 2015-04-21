@@ -3,69 +3,86 @@ using System.Collections.Generic;
 
 public class Stitcher
 {
+    /// <summary>
+    /// Stitch clothing onto an avatar.  Both clothing and avatar must be instantiated however clothing may be destroyed after.
+    /// </summary>
+    /// <param name="sourceClothing"></param>
+    /// <param name="targetAvatar"></param>
+    /// <returns></returns>
     public GameObject Stitch(GameObject sourceClothing, GameObject targetAvatar)
     {
-        sourceClothing = (GameObject)GameObject.Instantiate(sourceClothing);
-        var boneCatelog = new BoneCatelog(targetAvatar.transform);
+        var boneCatelog = new TransformCatelog(targetAvatar.transform);
         var skinnedMeshRenderers = sourceClothing.GetComponentsInChildren<SkinnedMeshRenderer>();
-        var targetClothing = CopyClothing(sourceClothing, targetAvatar.transform);
+        var targetClothing = AddChild(sourceClothing, targetAvatar.transform);
         foreach (var sourceRenderer in skinnedMeshRenderers)
         {
-            var targetRenderer = CopySkinnedRenderer(sourceRenderer, targetClothing);
-            targetRenderer.bones = TranslateBones(sourceRenderer.bones, boneCatelog);
+            var targetRenderer = AddSkinnedMeshRenderer(sourceRenderer, targetClothing);
+            targetRenderer.bones = TranslateTransforms(sourceRenderer.bones, boneCatelog);
         }
-        GameObject.Destroy(sourceClothing);
         return targetClothing;
     }
 
-    private GameObject CopyClothing(GameObject sourceClothing, Transform parent)
+
+    private GameObject AddChild(GameObject source, Transform parent)
     {
-        var targetClothing = new GameObject(sourceClothing.name);
-        targetClothing.transform.parent = parent;
-        targetClothing.transform.localPosition = sourceClothing.transform.localPosition;
-        targetClothing.transform.localRotation = sourceClothing.transform.localRotation;
-        targetClothing.transform.localScale = sourceClothing.transform.localScale;
-        return targetClothing;
+        var target = new GameObject(source.name);
+        target.transform.parent = parent;
+        target.transform.localPosition = source.transform.localPosition;
+        target.transform.localRotation = source.transform.localRotation;
+        target.transform.localScale = source.transform.localScale;
+        return target;
     }
 
-    private SkinnedMeshRenderer CopySkinnedRenderer(SkinnedMeshRenderer sourceRenderer, GameObject target)
+    private SkinnedMeshRenderer AddSkinnedMeshRenderer(SkinnedMeshRenderer source, GameObject parent)
     {
-        var targetRenderer = target.AddComponent<SkinnedMeshRenderer>();
-        targetRenderer.sharedMesh = sourceRenderer.sharedMesh;
-        targetRenderer.materials = sourceRenderer.materials;
-        return targetRenderer;
+        var target = parent.AddComponent<SkinnedMeshRenderer>();
+        target.sharedMesh = source.sharedMesh;
+        target.materials = source.materials;
+        return target;
     }
 
-    private Transform[] TranslateBones(Transform[] sourceBones, BoneCatelog boneCatelog)
+    private Transform[] TranslateTransforms(Transform[] sources, TransformCatelog transformCatelog)
     {
-        var targetBones = new Transform[sourceBones.Length];
-        for (var index = 0; index < sourceBones.Length; index++)
-            targetBones[index] = boneCatelog.Find(sourceBones[index].name);
-        return targetBones;
+        var targets = new Transform[sources.Length];
+        for (var index = 0; index < sources.Length; index++)
+            targets[index] = DictionaryExtensions.Find(transformCatelog, sources[index].name);
+        return targets;
     }
 
 
-    #region BoneCatelog
-    private class BoneCatelog : Dictionary<string, Transform>
+    #region TransformCatelog
+    private class TransformCatelog : Dictionary<string, Transform>
     {
         #region Constructors
-        public BoneCatelog(Transform transform)
+        public TransformCatelog(Transform transform)
         {
-            CatelogBones(transform);
+            Catelog(transform);
         }
         #endregion
 
         #region Catelog
-        private void CatelogBones(Transform transform)
+        private void Catelog(Transform transform)
         {
             Add(transform.name, transform);
             foreach (Transform child in transform)
-                CatelogBones(child);
+                Catelog(child);
         }
         #endregion
     }
     #endregion
 
+
+    #region DictionaryExtensions
+    private class DictionaryExtensions
+    {
+        public static TValue Find<TKey, TValue>(Dictionary<TKey, TValue> source, TKey key)
+        {
+            TValue value;
+            source.TryGetValue(key, out value);
+            return value;
+        }
+    }
+    #endregion
 
 }
 

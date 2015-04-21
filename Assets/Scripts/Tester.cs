@@ -24,11 +24,25 @@ public class Tester : MonoBehaviour
         {
             if (GUI.Button(new Rect(0, offset, buttonWidth, buttonHeight), cloth.name))
             {
-                if (wornClothing != null) GameObject.Destroy(wornClothing);
-                wornClothing = stitcher.Stitch(cloth, avatar);
+                RemoveWorn();
+                Wear(cloth);
             }
             offset += buttonHeight;
         }
     }
     #endregion
+
+    private void RemoveWorn()
+    {
+        if (wornClothing == null) return;
+        GameObject.Destroy(wornClothing);
+    }
+
+    private void Wear(GameObject clothing)
+    {
+        if (clothing == null) return;
+        clothing = (GameObject)GameObject.Instantiate(clothing);
+        wornClothing = stitcher.Stitch(clothing, avatar);
+        GameObject.Destroy(clothing);
+    }
 }
