@@ -8,7 +8,7 @@ public class Stitcher
     /// </summary>
     /// <param name="sourceClothing"></param>
     /// <param name="targetAvatar"></param>
-    /// <returns></returns>
+    /// <returns>Newly created clothing on avatar</returns>
     public GameObject Stitch(GameObject sourceClothing, GameObject targetAvatar)
     {
         var boneCatelog = new TransformCatelog(targetAvatar.transform);
