@@ -1,0 +1,368 @@
+fileFormatVersion: 2
+guid: b383e1eb5c308455aac3b5da7804e999
+ModelImporter:
+  serializedVersion: 16
+  fileIDToRecycleName:
+    100000: Abdomen
+    100002: Arm_L
+    100004: Arm_R
+    100006: Chest
+    100008: Chest_Plate
+    100010: Clavicle_L
+    100012: Clavicle_R
+    100014: Foot_L
+    100016: Foot_R
+    100018: Forearm_L
+    100020: Forearm_R
+    100022: Hand_L
+    100024: Hand_R
+    100026: Head
+    100028: Helmet
+    100030: Hips
+    100032: Human
+    100034: //RootNode
+    100036: Neck
+    100038: Pants
+    100040: Pelvis
+    100042: RootBone
+    100044: Shin_L
+    100046: Shin_R
+    100048: Skeleton
+    100050: T1_L
+    100052: T1_R
+    100054: T2_L
+    100056: T2_R
+    100058: T3_L
+    100060: T3_R
+    100062: Thigh_L
+    100064: Thigh_R
+    100066: Toes_L
+    100068: Toes_R
+    100070: W1_L
+    100072: W1_R
+    100074: W2_L
+    100076: W2_R
+    100078: W3_L
+    100080: W3_R
+    400000: Abdomen
+    400002: Arm_L
+    400004: Arm_R
+    400006: Chest
+    400008: Chest_Plate
+    400010: Clavicle_L
+    400012: Clavicle_R
+    400014: Foot_L
+    400016: Foot_R
+    400018: Forearm_L
+    400020: Forearm_R
+    400022: Hand_L
+    400024: Hand_R
+    400026: Head
+    400028: Helmet
+    400030: Hips
+    400032: Human
+    400034: //RootNode
+    400036: Neck
+    400038: Pants
+    400040: Pelvis
+    400042: RootBone
+    400044: Shin_L
+    400046: Shin_R
+    400048: Skeleton
+    400050: T1_L
+    400052: T1_R
+    400054: T2_L
+    400056: T2_R
+    400058: T3_L
+    400060: T3_R
+    400062: Thigh_L
+    400064: Thigh_R
+    400066: Toes_L
+    400068: Toes_R
+    400070: W1_L
+    400072: W1_R
+    400074: W2_L
+    400076: W2_R
+    400078: W3_L
+    400080: W3_R
+    4300000: Pants
+    4300002: Human
+    4300004: Helmet
+    4300006: Chest_Plate
+    7400000: Default Take
+    7400002: Walk
+    9500000: //RootNode
+    13700000: Chest_Plate
+    13700002: Helmet
+    13700004: Human
+    13700006: Pants
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Default Take
+      takeName: Default Take
+      firstFrame: 0
+      lastFrame: 23
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Chest_Plate
+        weight: 1
+      - path: Helmet
+        weight: 1
+      - path: Human
+        weight: 1
+      - path: Pants
+        weight: 1
+      - path: Skeleton
+        weight: 1
+      - path: Skeleton/RootBone
+        weight: 1
+      - path: Skeleton/RootBone/Pelvis
+        weight: 1
+      - path: Skeleton/RootBone/Pelvis/Abdomen
+        weight: 1
+      - path: Skeleton/RootBone/Pelvis/Abdomen/Chest
+        weight: 1
+      - path: Skeleton/RootBone/Pelvis/Abdomen/Chest/Clavicle_L
+        weight: 1
+      - path: Skeleton/RootBone/Pelvis/Abdomen/Chest/Clavicle_L/Arm_L
+        weight: 1
+      - path: Skeleton/RootBone/Pelvis/Abdomen/Chest/Clavicle_L/Arm_L/Forearm_L
+        weight: 1
+      - path: Skeleton/RootBone/Pelvis/Abdomen/Chest/Clavicle_L/Arm_L/Forearm_L/Hand_L
+        weight: 1
+      - path: Skeleton/RootBone/Pelvis/Abdomen/Chest/Clavicle_L/Arm_L/Forearm_L/Hand_L/T1_L
+        weight: 1
+      - path: Skeleton/RootBone/Pelvis/Abdomen/Chest/Clavicle_L/Arm_L/Forearm_L/Hand_L/T1_L/T2_L
+        weight: 1
+      - path: Skeleton/RootBone/Pelvis/Abdomen/Chest/Clavicle_L/Arm_L/Forearm_L/Hand_L/T1_L/T2_L/T3_L
+        weight: 1
+      - path: Skeleton/RootBone/Pelvis/Abdomen/Chest/Clavicle_L/Arm_L/Forearm_L/Hand_L/W1_L
+        weight: 1
+      - path: Skeleton/RootBone/Pelvis/Abdomen/Chest/Clavicle_L/Arm_L/Forearm_L/Hand_L/W1_L/W2_L
+        weight: 1
+      - path: Skeleton/RootBone/Pelvis/Abdomen/Chest/Clavicle_L/Arm_L/Forearm_L/Hand_L/W1_L/W2_L/W3_L
+        weight: 1
+      - path: Skeleton/RootBone/Pelvis/Abdomen/Chest/Clavicle_R
+        weight: 1
+      - path: Skeleton/RootBone/Pelvis/Abdomen/Chest/Clavicle_R/Arm_R
+        weight: 1
+      - path: Skeleton/RootBone/Pelvis/Abdomen/Chest/Clavicle_R/Arm_R/Forearm_R
+        weight: 1
+      - path: Skeleton/RootBone/Pelvis/Abdomen/Chest/Clavicle_R/Arm_R/Forearm_R/Hand_R
+        weight: 1
+      - path: Skeleton/RootBone/Pelvis/Abdomen/Chest/Clavicle_R/Arm_R/Forearm_R/Hand_R/T1_R
+        weight: 1
+      - path: Skeleton/RootBone/Pelvis/Abdomen/Chest/Clavicle_R/Arm_R/Forearm_R/Hand_R/T1_R/T2_R
+        weight: 1
+      - path: Skeleton/RootBone/Pelvis/Abdomen/Chest/Clavicle_R/Arm_R/Forearm_R/Hand_R/T1_R/T2_R/T3_R
+        weight: 1
+      - path: Skeleton/RootBone/Pelvis/Abdomen/Chest/Clavicle_R/Arm_R/Forearm_R/Hand_R/W1_R
+        weight: 1
+      - path: Skeleton/RootBone/Pelvis/Abdomen/Chest/Clavicle_R/Arm_R/Forearm_R/Hand_R/W1_R/W2_R
+        weight: 1
+      - path: Skeleton/RootBone/Pelvis/Abdomen/Chest/Clavicle_R/Arm_R/Forearm_R/Hand_R/W1_R/W2_R/W3_R
+        weight: 1
+      - path: Skeleton/RootBone/Pelvis/Abdomen/Chest/Neck
+        weight: 1
+      - path: Skeleton/RootBone/Pelvis/Abdomen/Chest/Neck/Head
+        weight: 1
+      - path: Skeleton/RootBone/Pelvis/Hips
+        weight: 1
+      - path: Skeleton/RootBone/Pelvis/Hips/Thigh_L
+        weight: 1
+      - path: Skeleton/RootBone/Pelvis/Hips/Thigh_L/Shin_L
+        weight: 1
+      - path: Skeleton/RootBone/Pelvis/Hips/Thigh_L/Shin_L/Foot_L
+        weight: 1
+      - path: Skeleton/RootBone/Pelvis/Hips/Thigh_L/Shin_L/Foot_L/Toes_L
+        weight: 1
+      - path: Skeleton/RootBone/Pelvis/Hips/Thigh_R
+        weight: 1
+      - path: Skeleton/RootBone/Pelvis/Hips/Thigh_R/Shin_R
+        weight: 1
+      - path: Skeleton/RootBone/Pelvis/Hips/Thigh_R/Shin_R/Foot_R
+        weight: 1
+      - path: Skeleton/RootBone/Pelvis/Hips/Thigh_R/Shin_R/Foot_R/Toes_R
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: Walk
+      takeName: Walk
+      firstFrame: 0
+      lastFrame: 24
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Chest_Plate
+        weight: 1
+      - path: Helmet
+        weight: 1
+      - path: Human
+        weight: 1
+      - path: Pants
+        weight: 1
+      - path: Skeleton
+        weight: 1
+      - path: Skeleton/RootBone
+        weight: 1
+      - path: Skeleton/RootBone/Pelvis
+        weight: 1
+      - path: Skeleton/RootBone/Pelvis/Abdomen
+        weight: 1
+      - path: Skeleton/RootBone/Pelvis/Abdomen/Chest
+        weight: 1
+      - path: Skeleton/RootBone/Pelvis/Abdomen/Chest/Clavicle_L
+        weight: 1
+      - path: Skeleton/RootBone/Pelvis/Abdomen/Chest/Clavicle_L/Arm_L
+        weight: 1
+      - path: Skeleton/RootBone/Pelvis/Abdomen/Chest/Clavicle_L/Arm_L/Forearm_L
+        weight: 1
+      - path: Skeleton/RootBone/Pelvis/Abdomen/Chest/Clavicle_L/Arm_L/Forearm_L/Hand_L
+        weight: 1
+      - path: Skeleton/RootBone/Pelvis/Abdomen/Chest/Clavicle_L/Arm_L/Forearm_L/Hand_L/T1_L
+        weight: 1
+      - path: Skeleton/RootBone/Pelvis/Abdomen/Chest/Clavicle_L/Arm_L/Forearm_L/Hand_L/T1_L/T2_L
+        weight: 1
+      - path: Skeleton/RootBone/Pelvis/Abdomen/Chest/Clavicle_L/Arm_L/Forearm_L/Hand_L/T1_L/T2_L/T3_L
+        weight: 1
+      - path: Skeleton/RootBone/Pelvis/Abdomen/Chest/Clavicle_L/Arm_L/Forearm_L/Hand_L/W1_L
+        weight: 1
+      - path: Skeleton/RootBone/Pelvis/Abdomen/Chest/Clavicle_L/Arm_L/Forearm_L/Hand_L/W1_L/W2_L
+        weight: 1
+      - path: Skeleton/RootBone/Pelvis/Abdomen/Chest/Clavicle_L/Arm_L/Forearm_L/Hand_L/W1_L/W2_L/W3_L
+        weight: 1
+      - path: Skeleton/RootBone/Pelvis/Abdomen/Chest/Clavicle_R
+        weight: 1
+      - path: Skeleton/RootBone/Pelvis/Abdomen/Chest/Clavicle_R/Arm_R
+        weight: 1
+      - path: Skeleton/RootBone/Pelvis/Abdomen/Chest/Clavicle_R/Arm_R/Forearm_R
+        weight: 1
+      - path: Skeleton/RootBone/Pelvis/Abdomen/Chest/Clavicle_R/Arm_R/Forearm_R/Hand_R
+        weight: 1
+      - path: Skeleton/RootBone/Pelvis/Abdomen/Chest/Clavicle_R/Arm_R/Forearm_R/Hand_R/T1_R
+        weight: 1
+      - path: Skeleton/RootBone/Pelvis/Abdomen/Chest/Clavicle_R/Arm_R/Forearm_R/Hand_R/T1_R/T2_R
+        weight: 1
+      - path: Skeleton/RootBone/Pelvis/Abdomen/Chest/Clavicle_R/Arm_R/Forearm_R/Hand_R/T1_R/T2_R/T3_R
+        weight: 1
+      - path: Skeleton/RootBone/Pelvis/Abdomen/Chest/Clavicle_R/Arm_R/Forearm_R/Hand_R/W1_R
+        weight: 1
+      - path: Skeleton/RootBone/Pelvis/Abdomen/Chest/Clavicle_R/Arm_R/Forearm_R/Hand_R/W1_R/W2_R
+        weight: 1
+      - path: Skeleton/RootBone/Pelvis/Abdomen/Chest/Clavicle_R/Arm_R/Forearm_R/Hand_R/W1_R/W2_R/W3_R
+        weight: 1
+      - path: Skeleton/RootBone/Pelvis/Abdomen/Chest/Neck
+        weight: 1
+      - path: Skeleton/RootBone/Pelvis/Abdomen/Chest/Neck/Head
+        weight: 1
+      - path: Skeleton/RootBone/Pelvis/Hips
+        weight: 1
+      - path: Skeleton/RootBone/Pelvis/Hips/Thigh_L
+        weight: 1
+      - path: Skeleton/RootBone/Pelvis/Hips/Thigh_L/Shin_L
+        weight: 1
+      - path: Skeleton/RootBone/Pelvis/Hips/Thigh_L/Shin_L/Foot_L
+        weight: 1
+      - path: Skeleton/RootBone/Pelvis/Hips/Thigh_L/Shin_L/Foot_L/Toes_L
+        weight: 1
+      - path: Skeleton/RootBone/Pelvis/Hips/Thigh_R
+        weight: 1
+      - path: Skeleton/RootBone/Pelvis/Hips/Thigh_R/Shin_R
+        weight: 1
+      - path: Skeleton/RootBone/Pelvis/Hips/Thigh_R/Shin_R/Foot_R
+        weight: 1
+      - path: Skeleton/RootBone/Pelvis/Hips/Thigh_R/Shin_R/Foot_R/Toes_R
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  additionalBone: 0
+  userData: 
