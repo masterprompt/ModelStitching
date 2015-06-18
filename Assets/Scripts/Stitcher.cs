@@ -11,12 +11,12 @@ public class Stitcher
 	/// <returns>Newly created clothing on avatar</returns>
 	public GameObject Stitch (GameObject sourceClothing, GameObject targetAvatar)
 	{
-		var boneCatelog = new TransformCatelog (targetAvatar.transform);
+		var boneCatalog = new TransformCatalog (targetAvatar.transform);
 		var skinnedMeshRenderers = sourceClothing.GetComponentsInChildren<SkinnedMeshRenderer> ();
 		var targetClothing = AddChild (sourceClothing, targetAvatar.transform);
 		foreach (var sourceRenderer in skinnedMeshRenderers) {
 			var targetRenderer = AddSkinnedMeshRenderer (sourceRenderer, targetClothing);
-			targetRenderer.bones = TranslateTransforms (sourceRenderer.bones, boneCatelog);
+			targetRenderer.bones = TranslateTransforms (sourceRenderer.bones, boneCatalog);
 		}
 		return targetClothing;
 	}
@@ -39,31 +39,31 @@ public class Stitcher
 		return target;
 	}
 
-	private Transform[] TranslateTransforms (Transform[] sources, TransformCatelog transformCatelog)
+	private Transform[] TranslateTransforms (Transform[] sources, TransformCatalog transformCatalog)
 	{
 		var targets = new Transform[sources.Length];
 		for (var index = 0; index < sources.Length; index++)
-			targets [index] = DictionaryExtensions.Find (transformCatelog, sources [index].name);
+			targets [index] = DictionaryExtensions.Find (transformCatalog, sources [index].name);
 		return targets;
 	}
 
 
-    #region TransformCatelog
-	private class TransformCatelog : Dictionary<string, Transform>
+    #region TransformCatalog
+	private class TransformCatalog : Dictionary<string, Transform>
 	{
         #region Constructors
-		public TransformCatelog (Transform transform)
+		public TransformCatalog (Transform transform)
 		{
-			Catelog (transform);
+			Catalog (transform);
 		}
         #endregion
 
-        #region Catelog
-		private void Catelog (Transform transform)
+        #region Catalog
+		private void Catalog (Transform transform)
 		{
 			Add (transform.name, transform);
 			foreach (Transform child in transform)
-				Catelog (child);
+				Catalog (child);
 		}
         #endregion
 	}
