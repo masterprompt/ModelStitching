@@ -35,15 +35,14 @@ public class Tester : MonoBehaviour
 	{
 		if (wornClothing == null)
 			return;
-		GameObject.Destroy (wornClothing);
+		    Destroy (wornClothing);
 	}
 
 	private void Wear (GameObject clothing)
 	{
 		if (clothing == null)
 			return;
-		clothing = (GameObject)GameObject.Instantiate (clothing);
+		clothing = Instantiate (clothing);
 		wornClothing = stitcher.Stitch (clothing, avatar);
-		GameObject.Destroy (clothing);
 	}
 }
